@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_250sdp"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_gravity="right"
+                    android:id="@+id/stmt_chart"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_6sdp"
+            android:layout_marginLeft="@dimen/_6sdp"
+            android:layout_marginRight="@dimen/_6sdp"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/tv_tr_date"
+                    style="@style/edit_text_login_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_margin_normal_"
+                    android:autofillHints="@string/date"
+                    android:background="@color/transparent"
+                    android:hint="@string/date"
+                    android:textAlignment="center"/>
+
+
+                <TextView
+                    android:id="@+id/tv_tr_money"
+                    style="@style/edit_text_login_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:layout_marginTop="@dimen/activity_margin_normal_"
+                    android:autofillHints="@string/us_dollar"
+                    android:hint="$ 54.74"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_20sdp"
+                    android:textColor="@color/black_color"
+                    android:textStyle="bold" />
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+
+                    <TextView
+                        android:id="@+id/tv_tr_trip1"
+                        style="@style/edit_text_login_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:autofillHints="@string/date"
+                        android:background="@color/transparent"
+                        android:hint="@string/abn_txt"
+                        android:layout_gravity="center"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:id="@+id/tv_tr_trip2"
+                        style="@style/edit_text_login_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:autofillHints="@string/date"
+                        android:background="@color/transparent"
+                        android:hint="@string/abn_txt"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:id="@+id/tv_tr_trip3"
+                        style="@style/edit_text_login_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:autofillHints="@string/date"
+                        android:background="@color/transparent"
+                        android:hint="@string/abn_txt"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"/>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:elevation="@dimen/_8sdp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_tr_trip_fares"
+                    style="@style/edit_text_login_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autofillHints="@string/date"
+                    android:background="@color/transparent"
+                    android:hint="Fares"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_gravity="left" />
+
+
+                <TextView
+                    android:id="@+id/tv_tr_trip_fares_fee"
+                    style="@style/edit_text_login_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autofillHints="@string/date"
+                    android:background="@color/transparent"
+                    android:hint="$ 40.25"
+                    android:layout_gravity="right"
+                    android:gravity="center|right"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_tr_trip_taxi"
+                    style="@style/edit_text_login_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autofillHints="@string/date"
+                    android:background="@color/transparent"
+                    android:hint="Truck Fee"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_gravity="left" />
+
+
+                <TextView
+                    android:id="@+id/tv_tr_trip_taxi_fee"
+                    style="@style/edit_text_login_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autofillHints="@string/date"
+                    android:background="@color/transparent"
+                    android:hint="$ 20.00"
+                    android:layout_gravity="right"
+                    android:gravity="center|right"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+
+            </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_tr_trip_tax"
+                        style="@style/edit_text_login_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autofillHints="@string/date"
+                        android:background="@color/transparent"
+                        android:hint=" +Tax"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_gravity="left" />
+
+
+                    <TextView
+                        android:id="@+id/tv_tr_trip_tax_fee"
+                        style="@style/edit_text_login_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autofillHints="@string/date"
+                        android:background="@color/transparent"
+                        android:hint="$ 400.50"
+                        android:layout_gravity="right"
+                        android:gravity="center|right"
+                        android:layout_marginLeft="@dimen/_10sdp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_tr_trip_tolls"
+                        style="@style/edit_text_login_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autofillHints="@string/date"
+                        android:background="@color/transparent"
+                        android:hint="+Tolls"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_gravity="left" />
+
+
+                    <TextView
+                        android:id="@+id/tv_tr_trip_tolls_fee"
+                        style="@style/edit_text_login_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autofillHints="@string/date"
+                        android:background="@color/transparent"
+                        android:hint="$ 400.00"
+                        android:layout_gravity="right"
+                        android:gravity="center|right"
+                        android:layout_marginLeft="@dimen/_10sdp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_tr_trip_surg"
+                        style="@style/edit_text_login_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autofillHints="@string/date"
+                        android:background="@color/transparent"
+                        android:hint="Surge"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_gravity="left" />
+
+
+                    <TextView
+                        android:id="@+id/tv_tr_trip_surg_fee"
+                        style="@style/edit_text_login_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autofillHints="@string/date"
+                        android:background="@color/transparent"
+                        android:hint="$ 40.00"
+                        android:layout_gravity="right"
+                        android:gravity="center|right"
+                        android:layout_marginLeft="@dimen/_10sdp"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_tr_trip_dis"
+                        style="@style/edit_text_login_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autofillHints="@string/date"
+                        android:background="@color/transparent"
+                        android:hint="Discount(-)"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_gravity="left" />
+
+
+                    <TextView
+                        android:id="@+id/tv_tr_trip_dis_fee"
+                        style="@style/edit_text_login_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autofillHints="@string/date"
+                        android:background="@color/transparent"
+                        android:hint="$ 20.00"
+                        android:layout_gravity="right"
+                        android:gravity="center|right"
+                        android:layout_marginLeft="@dimen/_10sdp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:elevation="@dimen/_8sdp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_tr_trip_total"
+                    style="@style/edit_text_login_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autofillHints="@string/date"
+                    android:hint="Total Earning"
+                    android:textColor="@color/green"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_gravity="left" />
+
+
+                <TextView
+                    android:id="@+id/tv_tr_trip_total_fee"
+                    style="@style/edit_text_login_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autofillHints="@string/date"
+                    android:hint="$ 20.00"
+                    android:textColor="@color/green"
+                    android:layout_gravity="right"
+                    android:gravity="center|right"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

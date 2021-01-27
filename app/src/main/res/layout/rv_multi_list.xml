@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/bgo"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                app:elevation="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <RelativeLayout
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/back_btn"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/activity_margin_medium"/>
+
+
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/titillium_regular"
+                        android:text="@string/deleveryd_d_txt"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/white_color"
+                        android:textSize="@dimen/text_size_extra_normal" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+            <TextView
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:id="@+id/type_orderss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_gravity="center"
+                android:textSize="@dimen/text_size_extra_normal"
+                android:textStyle="bold"
+                android:text=""
+                android:textColor="@color/white_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="25dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:background="@color/white_color" />
+
+                    <TextView
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:id="@+id/pick_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="@dimen/text_size_extra_normal"
+                        android:textStyle="bold"
+                        android:text="Pickup info"
+                        android:textColor="@color/white_color" />
+
+                    <View
+                        android:layout_width="25dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:background="@color/white_color" />
+
+                </LinearLayout>
+
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/pick_info"-->
+<!--                    android:padding="20dp"-->
+<!--                    android:textColor="#ffffff"-->
+<!--                    android:textSize="15dp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:text="Pickup info"/>-->
+
+<!--            </LinearLayout>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/car"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:fontFamily="@font/titillium_regular"
+                    android:layout_width="100dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:text="Name"
+                    android:textColor="#ffffff"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:fontFamily="@font/titillium_regular"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#ffffff"
+                    android:id="@+id/tv_pick_personname"
+                    android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/car"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:fontFamily="@font/titillium_regular"
+
+                    android:layout_width="100dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#ffffff"
+                    android:text="Mobile"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:fontFamily="@font/titillium_regular"
+
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/tv_pick_personmobile"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textAllCaps="true"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/car"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:fontFamily="@font/titillium_regular"
+                    android:layout_width="100dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Pickup\naddress"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+                <TextView
+                    android:fontFamily="@font/titillium_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/tv_pick_personaddres"
+                    android:textColor="#ffffff"
+                    android:text=""
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/car"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:fontFamily="@font/titillium_regular"
+                    android:layout_width="100dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Pickup\Inside"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_pick_inside"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_normal"
+                    tools:text="@string/drofoffinfo_txt"
+                    android:textColor="@color/white_color"
+                    android:layout_marginTop="@dimen/text_margin_small"
+                    android:fontFamily="@font/titillium_regular"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/car"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:fontFamily="@font/titillium_regular"
+                    android:layout_width="100dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Goods Class"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_goods_class"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_normal"
+                    tools:text="goods class"
+                    android:textColor="@color/white_color"
+                    android:layout_marginTop="@dimen/text_margin_small"
+                    android:fontFamily="@font/titillium_regular"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/car"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:fontFamily="@font/titillium_regular"
+                    android:layout_width="100dp"
+                    android:layout_height="42dp"
+                    android:id="@+id/tv_total_bp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Total"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_count_pb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_normal"
+                    tools:text=""
+                    android:textColor="@color/white_color"
+                    android:layout_marginTop="@dimen/text_margin_small"
+                    android:fontFamily="@font/titillium_regular"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/car"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:fontFamily="@font/titillium_regular"
+                    android:layout_width="100dp"
+                    android:layout_height="42dp"
+                    android:id="@+id/tv_total_box"
+                    android:layout_marginLeft="10dp"
+                    android:text="Total"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_count_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_normal"
+                    tools:text=""
+                    android:textColor="@color/white_color"
+                    android:layout_marginTop="@dimen/text_margin_small"
+                    android:fontFamily="@font/titillium_regular"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/car"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:fontFamily="@font/titillium_regular"
+                    android:layout_width="100dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Pickup\LiftGate"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_pick_liftgate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_normal"
+                    tools:text="@string/drofoffinfo_txt"
+                    android:textColor="@color/white_color"
+                    android:layout_marginTop="@dimen/text_margin_small"
+                    android:fontFamily="@font/titillium_regular"/>
+            </LinearLayout>
+
+
+<!--            here is for specialIns-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/car"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:fontFamily="@font/titillium_regular"
+                    android:layout_width="100dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/special_ins_txt"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_pick_specialinstpick"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_normal"
+                    tools:text="@string/special_ins_txt"
+                    android:textColor="@color/white_color"
+                    android:layout_marginTop="@dimen/text_margin_small"
+                    android:fontFamily="@font/titillium_regular"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_pickup_date"
+                    style="@style/edit_text_login_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_margin_normal_"
+                    android:autofillHints="@string/country_txt"
+                    android:hint="@string/pickup_date_qua_txt"
+                    android:layout_marginRight="6dp"
+                    android:imeOptions="actionNext"
+                    android:layout_weight="1"
+                    android:inputType="date"
+                    android:focusable="false"/>
+
+                <EditText
+                    android:id="@+id/et_pickup_time"
+                    style="@style/edit_text_login_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/activity_margin_normal_"
+                    android:autofillHints="@string/country_txt"
+                    android:hint="@string/pickup_time"
+                    android:imeOptions="actionNext"
+                    android:layout_marginLeft="6dp"
+                    android:inputType="datetime"
+                    android:focusable="false"/>
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:id="@+id/drop_recycler"
+                android:layout_height="wrap_content"/>
+
+
+            <LinearLayout
+                android:id="@+id/ll_distance_value"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/car"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:fontFamily="@font/titillium_regular"
+                    android:layout_width="100dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#ffffff"
+                    android:text="Total distance"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:fontFamily="@font/titillium_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/tv_totaldistance"
+                    android:textColor="#ffffff"
+                    android:text="10000"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/car"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:fontFamily="@font/titillium_regular"
+                    android:layout_width="100dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#ffffff"
+                    android:text="Total cost"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_totalcost"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/titillium_regular"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/drop_recycler"
+                >
+
+                <Button
+
+                    android:id="@+id/btn_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="@dimen/activity_margin_medium"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_shape"
+                    android:fontFamily="@font/titillium_regular"
+                    android:minHeight="0dp"
+                    android:paddingTop="@dimen/text_padding"
+                    android:paddingBottom="@dimen/text_padding"
+                    android:text="ADD"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/text_size_extra_normal"
+                    android:textStyle="bold" />
+
+
+                <Button
+                    android:id="@+id/btn_summit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="@dimen/activity_margin_medium"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_shape"
+                    android:fontFamily="@font/titillium_regular"
+                    android:minHeight="0dp"
+                    android:paddingTop="@dimen/text_padding"
+                    android:paddingBottom="@dimen/text_padding"
+                    android:text="Submit"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/text_size_extra_normal"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/drop_recycler">
+
+                <Button
+
+                    android:id="@+id/btn_report"
+                    android:background="@drawable/report"
+                    android:textColor="@color/white_color"
+                    android:fontFamily="@font/titillium_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="@dimen/activity_margin_medium"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:minHeight="0dp"
+                    android:paddingTop="@dimen/text_padding"
+                    android:paddingBottom="@dimen/text_padding"
+                    android:text="Payment"
+                    android:textSize="@dimen/text_size_extra_normal"
+                    android:textStyle="bold" />
+
+
+                <Button
+                    android:id="@+id/btn_routeing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="@dimen/activity_margin_medium"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:background="@drawable/button_shape"
+                    android:fontFamily="@font/titillium_regular"
+                    android:minHeight="0dp"
+                    android:paddingTop="@dimen/text_padding"
+                    android:paddingBottom="@dimen/text_padding"
+                    android:text="View Driver"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/text_size_extra_normal"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

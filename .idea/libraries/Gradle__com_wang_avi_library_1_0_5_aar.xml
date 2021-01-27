@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="Gradle: com.wang.avi:library:1.0.5@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/eff48dc9ebfa48735b0998b410e1bcbb/library-1.0.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/eff48dc9ebfa48735b0998b410e1bcbb/library-1.0.5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/eff48dc9ebfa48735b0998b410e1bcbb/library-1.0.5/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/transforms-2/files-2.1/eff48dc9ebfa48735b0998b410e1bcbb/library-1.0.5/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/transforms-2/files-2.1/eff48dc9ebfa48735b0998b410e1bcbb/library-1.0.5/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/transforms-2/files-2.1/eff48dc9ebfa48735b0998b410e1bcbb/library-1.0.5/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.wang.avi/library/1.0.5/3154daec976e59b599e0a0b3e4effd6a6d3e8be6/library-1.0.5-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/modules-2/files-2.1/com.wang.avi/library/1.0.5/3154daec976e59b599e0a0b3e4effd6a6d3e8be6/library-1.0.5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.wang.avi/library/1.0.5/12fd661063389c40ecb4e4da06ad565fe675eb00/library-1.0.5-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/modules-2/files-2.1/com.wang.avi/library/1.0.5/12fd661063389c40ecb4e4da06ad565fe675eb00/library-1.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

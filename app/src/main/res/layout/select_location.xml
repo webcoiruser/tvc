@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:id="@+id/main_coll"
+    tools:context=".activities.SelectLocation">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appbar_ll"
+        android:layout_height="@dimen/_90sdp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/conte_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/back_ahwa"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:padding="@dimen/_13sdp"
+                android:src="@drawable/back_btn"
+                android:tint="@color/white_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_5sdp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@color/white_color"
+                    android:inputType="textNoSuggestions"
+                    android:maxLines="2"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:selectAllOnFocus="true"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/_10ssp" />
+
+                <ProgressBar
+                    android:id="@+id/add_load_pb"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/appbar_ll"
+        android:id="@+id/main_ll"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map"
+            class="com.pickanddrop.utils.WorkaroundMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/pin"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/_35sdp"
+            app:srcCompat="@drawable/pin"
+            android:visibility="visible" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/done_btn"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:textAllCaps="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@color/colorPrimary"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:text="Done"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/_14ssp"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:cornerRadius="2dp"
+            app:rippleColor="@color/light_gray_rate"
+            app:strokeColor="@color/white_color"
+            app:strokeWidth="1dp" />
+
+
+
+    </RelativeLayout>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:id="@+id/mapcon_cl"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:layout_height="match_parent">
+
+        <!-- Adding bottom sheet after main content -->
+         <include layout="@layout/home_work_bottom_sheet"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+</RelativeLayout>

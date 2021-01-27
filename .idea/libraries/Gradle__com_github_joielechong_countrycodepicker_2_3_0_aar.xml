@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.joielechong:countrycodepicker:2.3.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ce7ea5f2cedd6371ad2268ff6bd2ce74/jetified-countrycodepicker-2.3.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ce7ea5f2cedd6371ad2268ff6bd2ce74/jetified-countrycodepicker-2.3.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ce7ea5f2cedd6371ad2268ff6bd2ce74/jetified-countrycodepicker-2.3.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a405b6027f6fdbbd717c1366863fce58/jetified-countrycodepicker-2.3.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a405b6027f6fdbbd717c1366863fce58/jetified-countrycodepicker-2.3.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a405b6027f6fdbbd717c1366863fce58/jetified-countrycodepicker-2.3.0/res" />
+      <root url="file://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/transforms-2/files-2.1/d45ee8f21e610c48b63385d6af5492ca/jetified-countrycodepicker-2.3.0/res" />
+      <root url="file://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/transforms-2/files-2.1/d45ee8f21e610c48b63385d6af5492ca/jetified-countrycodepicker-2.3.0/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/transforms-2/files-2.1/d45ee8f21e610c48b63385d6af5492ca/jetified-countrycodepicker-2.3.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.joielechong/countrycodepicker/2.3.0/bf941df5b6abb9a1be5aa38ae79d52d44187f505/countrycodepicker-2.3.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/modules-2/files-2.1/com.github.joielechong/countrycodepicker/2.3.0/bf941df5b6abb9a1be5aa38ae79d52d44187f505/countrycodepicker-2.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/payment_request">
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.pickanddrop.activities.BookingRequest"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:background="@drawable/bgo">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                app:elevation="0dp"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <RelativeLayout
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/back_btn"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/activity_margin_medium"/>
+
+
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/titillium_regular"
+                        android:text="@string/payment_request"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/white_color"
+                        android:textSize="@dimen/text_size_extra_normal" />
+
+                    <ImageView
+                        android:id="@+id/iv_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/edit"
+                        android:visibility="gone"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/activity_margin_medium"/>
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:id="@+id/time_anddest">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Delivery"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/titillium_regular"
+                            android:textColor="@color/white_color"
+                            android:layout_toLeftOf="@+id/progress_rel"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Delivery Date"
+                            android:id="@+id/del_date"
+                            android:textSize="14sp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/titillium_regular"
+                            android:layout_marginRight="10dp"
+                            android:textColor="@color/editText"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Delivery Type"
+                            android:id="@+id/del_type"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/titillium_regular"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/white_color"
+                            android:layout_toRightOf="@+id/progress_rel"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/del_take_time"
+                            android:textSize="15dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/titillium_regular"
+                            android:layout_marginRight="10dp"
+                            android:textColor="@color/white_color"
+                            android:layout_height="wrap_content"/>
+
+                        <RelativeLayout
+                            android:id="@+id/progress_rel"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerInParent="true"
+                            android:visibility="visible">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:background="@android:color/transparent"
+                                android:layout_height="match_parent"/>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:src="@drawable/loginlogo"
+                                android:padding="17dp"
+                                android:layout_height="match_parent"/>
+
+
+
+
+                            <ProgressBar
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:indeterminate="false"
+                                android:max="60"
+                                android:progress="60"
+                                android:progressDrawable="@drawable/circle_bg"
+                                android:visibility="visible" />
+
+
+                            <ProgressBar
+                                android:id="@+id/myProgress"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="8dp"
+                                android:layout_centerInParent="true"
+                                android:indeterminate="false"
+                                android:progressDrawable="@drawable/new_probg" />
+
+                            <!--
+                                                <TextView
+                                                    android:id="@+id/text_onbar"
+                                                    android:text="29"
+                                                    android:visibility="gone"
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_centerInParent="true"
+                                                    android:textSize="@dimen/_30ssp" />-->
+
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/white_color"
+                                android:text="$"
+                                android:textStyle="bold"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginEnd="2dp"
+                                android:textSize="20sp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_height="wrap_content"></TextView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/white_color"
+                                android:id="@+id/del_amount"
+                                android:textSize="26sp"
+                                android:text="25.0"
+                                android:textStyle="bold"
+                                android:layout_height="wrap_content"></TextView>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginStart="@dimen/activity_margin_medium"
+                        android:layout_marginEnd="@dimen/activity_margin_medium"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:id="@+id/card_details_container"
+                            android:layout_height="wrap_content">
+
+                            <com.stripe.android.view.CardMultilineWidget
+                                android:layout_marginTop="15dp"
+                                android:backgroundTint="@color/white_color"
+                                android:id="@+id/card_multiline_widget"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:shouldShowPostalCode="false"
+                                style="@style/edit_card_style" />
+
+                            <EditText
+                                android:id="@+id/et_card_name"
+                                style="@style/edit_text_login_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/activity_margin_normal_"
+                                android:autofillHints="@string/cardholder_s_name"
+                                android:hint="@string/cardholder_s_name"
+                                android:imeOptions="actionNext"
+                                android:inputType="textPersonName|textCapWords" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        <Button
+                            android:id="@+id/payment_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/activity_margin_medium"
+                            android:text="Pay Now"
+                            android:minHeight="0dp"
+                            android:textAllCaps="false"
+                            android:textStyle="bold"
+                            android:background="@drawable/button_shape"
+                            android:textColor="@color/yellow"
+                            android:layout_marginTop="@dimen/text_margin_xlarge"
+                            android:fontFamily="@font/titillium_regular"
+                            android:textSize="@dimen/text_size_extra_normal"
+                            android:paddingTop="@dimen/text_padding"
+                            android:paddingBottom="@dimen/text_padding" />
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:id="@+id/content_container"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:maxLines="2"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/editText"
+                                    android:text="PickUp Location - "
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_height="wrap_content"></TextView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:maxLines="2"
+                                    android:fontFamily="@font/titillium_regular"
+                                    android:textSize="13sp"
+                                    android:textColor="@color/white_color"
+                                    android:text="PickUp Location"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:id="@+id/pickup_location"
+
+                                    android:layout_height="wrap_content"></TextView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginBottom="10dp"
+                                android:id="@+id/drop_containr"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:textColor="@color/editText"
+                                    android:text="Delivery Location - "
+                                    android:maxLines="2"
+                                    android:textStyle="bold"
+                                    android:textSize="13sp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+
+                                    android:layout_height="wrap_content"></TextView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:textColor="@color/white_color"
+                                    android:text="Delivery Location"
+                                    android:id="@+id/drop_address"
+                                    android:maxLines="2"
+                                    android:fontFamily="@font/titillium_regular"
+                                    android:textSize="13sp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+
+                                    android:layout_height="wrap_content"></TextView>
+
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/read_more"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/activity_margin_medium"
+                                android:text="Read More "
+                                android:minHeight="0dp"
+                                android:textAllCaps="false"
+                                android:textStyle="bold"
+                                android:background="@drawable/button_shape"
+                                android:textColor="@color/yellow"
+                                android:layout_marginTop="@dimen/text_margin_xlarge"
+                                android:fontFamily="@font/titillium_regular"
+                                android:textSize="@dimen/text_size_extra_normal"
+                                android:paddingTop="@dimen/text_padding"
+                                android:paddingBottom="@dimen/text_padding" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+                </LinearLayout>
+
+
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/more_info_container"
+            android:background="@drawable/bgo"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.pickanddrop.utils.ImageViewCircular
+                        android:layout_width="35dp"
+                        android:id="@+id/close_details"
+                        app:srcCompat="@drawable/cross_icon"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_height="35dp"/>
+
+
+                </RelativeLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/fragment_container"
+                    android:visibility="visible"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

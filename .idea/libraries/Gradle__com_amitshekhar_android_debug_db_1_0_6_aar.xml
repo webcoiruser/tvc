@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amitshekhar.android:debug-db:1.0.6@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9cd2fe62e2a5fe53f5bba4ae43644e98/debug-db-1.0.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9cd2fe62e2a5fe53f5bba4ae43644e98/debug-db-1.0.6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9cd2fe62e2a5fe53f5bba4ae43644e98/debug-db-1.0.6/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/transforms-2/files-2.1/9cd2fe62e2a5fe53f5bba4ae43644e98/debug-db-1.0.6/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/transforms-2/files-2.1/9cd2fe62e2a5fe53f5bba4ae43644e98/debug-db-1.0.6/res" />
+      <root url="file://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/transforms-2/files-2.1/9cd2fe62e2a5fe53f5bba4ae43644e98/debug-db-1.0.6/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amitshekhar.android/debug-db/1.0.6/341566ac110ceffb1b65c5eae63be69d867a8861/debug-db-1.0.6-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/modules-2/files-2.1/com.amitshekhar.android/debug-db/1.0.6/341566ac110ceffb1b65c5eae63be69d867a8861/debug-db-1.0.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amitshekhar.android/debug-db/1.0.6/6c95606c9456e54d13017b108175d5381fedaea6/debug-db-1.0.6-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/modules-2/files-2.1/com.amitshekhar.android/debug-db/1.0.6/6c95606c9456e54d13017b108175d5381fedaea6/debug-db-1.0.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

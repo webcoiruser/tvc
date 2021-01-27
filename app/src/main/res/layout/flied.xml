@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/q"
+        android:hint="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="4" />
+
+    <EditText
+        android:hint="6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:hint="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:hint="4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:hint="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_margin_normal_"
+        android:text="delete"
+        android:minHeight="0dp"
+        android:onClick="onDelete"
+        android:textStyle="bold"
+        android:background="@drawable/button_shape"
+        android:textColor="@color/yellow"
+        android:layout_marginTop="@dimen/text_margin_xlarge"
+        android:fontFamily="@font/titillium_regular"
+        android:textSize="@dimen/text_size_extra_normal"
+        android:paddingTop="@dimen/text_padding"
+        android:paddingBottom="@dimen/text_padding" />
+
+</LinearLayout>

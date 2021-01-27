@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amitshekhar.android:debug-db-base:1.0.6@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e190b9552ddf6bc832395efb251e1f3a/jetified-debug-db-base-1.0.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e190b9552ddf6bc832395efb251e1f3a/jetified-debug-db-base-1.0.6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e190b9552ddf6bc832395efb251e1f3a/jetified-debug-db-base-1.0.6/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ebd3e7691fc8f30e26eeff9cd5794baf/jetified-debug-db-base-1.0.6/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ebd3e7691fc8f30e26eeff9cd5794baf/jetified-debug-db-base-1.0.6/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ebd3e7691fc8f30e26eeff9cd5794baf/jetified-debug-db-base-1.0.6/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/transforms-2/files-2.1/aae55fad6e73e927ff1d1e42038b6f13/jetified-debug-db-base-1.0.6/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/transforms-2/files-2.1/aae55fad6e73e927ff1d1e42038b6f13/jetified-debug-db-base-1.0.6/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/transforms-2/files-2.1/aae55fad6e73e927ff1d1e42038b6f13/jetified-debug-db-base-1.0.6/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amitshekhar.android/debug-db-base/1.0.6/43c6abb777258b8e02b7a4f4aef44f5996ddf30f/debug-db-base-1.0.6-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/modules-2/files-2.1/com.amitshekhar.android/debug-db-base/1.0.6/43c6abb777258b8e02b7a4f4aef44f5996ddf30f/debug-db-base-1.0.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amitshekhar.android/debug-db-base/1.0.6/827f4dfda522bcf259f7bea40896a9cc9427d5b1/debug-db-base-1.0.6-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/modules-2/files-2.1/com.amitshekhar.android/debug-db-base/1.0.6/827f4dfda522bcf259f7bea40896a9cc9427d5b1/debug-db-base-1.0.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

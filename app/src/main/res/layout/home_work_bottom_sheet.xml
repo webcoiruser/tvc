@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:nestedScrollingEnabled="true"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="@dimen/_160sdp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_color"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary"
+            android:layout_height="@dimen/_55sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:tint="@color/white_color"
+                android:src="@drawable/back_btn"
+                android:rotation="-90"
+                android:layout_marginTop="@dimen/_10sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white_color"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:textSize="@dimen/_11sdp"
+                android:text="Slide Down For Map"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/search_address_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_color"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

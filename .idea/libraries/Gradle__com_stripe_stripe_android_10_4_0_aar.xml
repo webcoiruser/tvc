@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="Gradle: com.stripe:stripe-android:10.4.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7aed9a34b870435bc3dd68e4694ade1d/jetified-stripe-android-10.4.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0121abbdfd7a812bc49793045f421982/jetified-stripe-android-10.4.0/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/transforms-2/files-2.1/aba82a0e456dd590afd0ca5b17e9f88b/jetified-stripe-android-10.4.0/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7aed9a34b870435bc3dd68e4694ade1d/jetified-stripe-android-10.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7aed9a34b870435bc3dd68e4694ade1d/jetified-stripe-android-10.4.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7aed9a34b870435bc3dd68e4694ade1d/jetified-stripe-android-10.4.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0121abbdfd7a812bc49793045f421982/jetified-stripe-android-10.4.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0121abbdfd7a812bc49793045f421982/jetified-stripe-android-10.4.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0121abbdfd7a812bc49793045f421982/jetified-stripe-android-10.4.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/transforms-2/files-2.1/aba82a0e456dd590afd0ca5b17e9f88b/jetified-stripe-android-10.4.0/res" />
+      <root url="file://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/transforms-2/files-2.1/aba82a0e456dd590afd0ca5b17e9f88b/jetified-stripe-android-10.4.0/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/transforms-2/files-2.1/aba82a0e456dd590afd0ca5b17e9f88b/jetified-stripe-android-10.4.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.stripe/stripe-android/10.4.0/34d4e57108240fd8cfbbbb6fca01b1333c68a797/stripe-android-10.4.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/modules-2/files-2.1/com.stripe/stripe-android/10.4.0/34d4e57108240fd8cfbbbb6fca01b1333c68a797/stripe-android-10.4.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.stripe/stripe-android/10.4.0/a3c38f4a6297394c39c49b424c09b701c3ae698f/stripe-android-10.4.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/modules-2/files-2.1/com.stripe/stripe-android/10.4.0/a3c38f4a6297394c39c49b424c09b701c3ae698f/stripe-android-10.4.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

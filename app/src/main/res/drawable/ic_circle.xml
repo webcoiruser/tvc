@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+
+        <shape android:shape="oval">
+            <solid
+                android:width="@dimen/activity_margin_normal20_"
+                android:color="@color/fadedBlue"/>
+            <stroke android:color="#3b91d7" android:width="2dp"/>
+            <!-- Set the same value for both width and height to get a circular shape -->
+            <size android:width="250dp" android:height="250dp"/>
+        </shape>
+    </item>
+</selector>
+
+<!--
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape
+            android:shape="oval" >
+            <solid android:color="@color/fadedBlue" />
+
+            <size
+                android:height="15dp"
+                android:width="15dp" />
+        </shape>
+    </item>
+
+    <item>
+        <shape
+            android:shape="oval" >
+            <solid android:color="@color/fadedBlue" />
+
+            <size
+                android:height="10dp"
+                android:width="10dp" />
+        </shape>
+    </item>
+
+    <item>
+        <shape
+            android:shape="ring"
+            android:innerRadius="6.3dp"
+            android:thickness="1dp"
+            android:useLevel="false">
+            <solid android:color="#4d4d4d" />
+
+        </shape>
+    </item>
+
+</layer-list>-->
