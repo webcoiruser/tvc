@@ -186,7 +186,7 @@ public class MultipleAdd extends BaseFragment implements View.OnClickListener, A
             String url = getDirectionsUrl(source, dest);
             DownloadTask downloadTask = new DownloadTask();
 
-            downloadTask.execute(url);
+             downloadTask.execute(url);
             //Location loc1 = new Location("");
             //loc1.setLatitude(Double.parseDouble(deliveryDTO.getDeliveryDistance()));
             String  myDist = deliveryDTO.getDeliveryDistance();
@@ -203,6 +203,17 @@ public class MultipleAdd extends BaseFragment implements View.OnClickListener, A
            //distance(loc1.getLatitude(),loc1.getLongitude(),loc2.getLatitude(),loc2.getLongitude());
             //float distanceInmiles = (loc1.distanceTo(loc2)) / 1000;
 
+            if(deliverstatuscurrent ) {
+                multiListBinding.tvTotalcost.setText("$ "+deliveryDTO.getDeliveryCost());
+                multiListBinding.tvTotaldistance.setText(deliveryDTO.getTotal_distance());
+            }else if(history){
+                multiListBinding.tvTotalcost.setText("$ "+deliveryDTO.getDeliveryCost());
+                multiListBinding.tvTotaldistance.setText(deliveryDTO.getTotal_distance());
+
+            }else {
+                callOrderMultipleBookApi();
+            }
+            multiListBinding.llDistanceValue.setVisibility(View.VISIBLE);
 
 
 //            double distb =
@@ -222,9 +233,11 @@ public class MultipleAdd extends BaseFragment implements View.OnClickListener, A
         }else {
                // multiListBinding.tvTotalcost.setText(getString(R.string.us_dollar) + " " + String.valueOf(Double.valueOf(totalPrice)));
             multiListBinding.tvTotalcost.setText(getString(R.string.us_dollar) + " " + deliveryDTO.getDeliveryCost());
+
                 //multiListBinding.tvTotalcost.setText(getString(R.string.us_dollar) + " " + "0");
 
-            multiListBinding.tvTotaldistance.setText("0" + " km");
+           // multiListBinding.tvTotaldistance.setText("0" + " km");
+            multiListBinding.tvTotaldistance.setText(deliveryDTO.getTotal_distance());
             multiListBinding.llDistanceValue.setVisibility(View.VISIBLE);
         }
 
@@ -245,8 +258,10 @@ public class MultipleAdd extends BaseFragment implements View.OnClickListener, A
 
         if(deliverstatuscurrent ) {
             multiListBinding.tvTotalcost.setText("$ "+deliveryDTO.getDeliveryCost());
+            multiListBinding.tvTotaldistance.setText(deliveryDTO.getTotal_distance());
         }else if(history){
             multiListBinding.tvTotalcost.setText("$ "+deliveryDTO.getDeliveryCost());
+            multiListBinding.tvTotaldistance.setText(deliveryDTO.getTotal_distance());
 
         }else {
             callOrderMultipleBookApi();
@@ -255,7 +270,7 @@ public class MultipleAdd extends BaseFragment implements View.OnClickListener, A
 //            multiListBinding.tvTotaldistance.setText(String.format("%.3f",Double.parseDouble(deliveryDTO.getDeliveryDistance())) + " Mile");
 
 //        multiListBinding.tvTotaldistance.setText(valueResult + "   KM  " + kmInDec + " Meter   " + meterInDec);
-        multiListBinding.tvTotaldistance.setText(String.format("%.2f",dist));
+       // multiListBinding.tvTotaldistance.setText(String.format("%.2f",dist));
 
         multiListBinding.llDistanceValue.setVisibility(View.VISIBLE);
 
@@ -297,9 +312,10 @@ public class MultipleAdd extends BaseFragment implements View.OnClickListener, A
 
             if(deliverstatuscurrent ) {
                 multiListBinding.tvTotalcost.setText("$ "+deliveryDTO.getDeliveryCost());
+                multiListBinding.tvTotaldistance.setText(deliveryDTO.getTotal_distance());
             }else if(history){
                 multiListBinding.tvTotalcost.setText("$ "+deliveryDTO.getDeliveryCost());
-
+                multiListBinding.tvTotaldistance.setText(deliveryDTO.getTotal_distance());
             }else {
                 callOrderMultipleBookApi();
             }
@@ -510,14 +526,14 @@ public class MultipleAdd extends BaseFragment implements View.OnClickListener, A
 
             try {
                 jObject = new JSONObject(jsonData[0]);
-                Log.d("ParserTask",jsonData[0].toString());
-                DataParser parser = new DataParser();
-                Log.d("ParserTask", parser.toString());
+                //Log.d("ParserTask",jsonData[0].toString());
+               // DataParser parser = new DataParser();
+               // Log.d("ParserTask", parser.toString());
 
                 // Starts parsing data
-                routes = parser.parse(jObject);
+               // routes = parser.parse(jObject);
                 Log.d("ParserTask","Executing routes");
-                Log.d("ParserTask",routes.toString());
+              //  Log.d("ParserTask",routes.toString());
 
             } catch (Exception e) {
                 Log.d("ParserTask",e.toString());
@@ -529,10 +545,11 @@ public class MultipleAdd extends BaseFragment implements View.OnClickListener, A
 
         // Executes in UI thread, after the parsing process
         @Override
-        protected void onPostExecute(List<List<HashMap<String, String>>> result) {
+      protected void onPostExecute(List<List<HashMap<String, String>>> result) {
 
 
-            Handler refresh = new Handler(Looper.getMainLooper());
+            callOrderMultipleBookApi();
+         /*  Handler refresh = new Handler(Looper.getMainLooper());
             refresh.post(new Runnable() {
                 ArrayList<LatLng> points;
                 PolylineOptions lineOptions = null;
@@ -581,14 +598,18 @@ public class MultipleAdd extends BaseFragment implements View.OnClickListener, A
 
                         if(deliverstatuscurrent ) {
                             multiListBinding.tvTotalcost.setText("$ "+deliveryDTO.getDeliveryCost());
+                            multiListBinding.tvTotaldistance.setText(String.format("%.3f",Double.parseDouble(deliveryDTO.getTotal_distance()))+ " Mile");
+                            Log.e("error","imranget"+deliveryDTO.getDeliveryCost());
                         }else if(history){
                             multiListBinding.tvTotalcost.setText("$ "+deliveryDTO.getDeliveryCost());
+                            multiListBinding.tvTotaldistance.setText(String.format("%.3f",Double.parseDouble(deliveryDTO.getTotal_distance()))+ " Mile");
 
                         }else {
                             callOrderMultipleBookApi();
                         }
 //                        multiListBinding.tvTotaldistance.setText(String.format("%.3f",Double.parseDouble(MyConstant.DISTANCE)) + " Mile");
-                        multiListBinding.tvTotaldistance.setText(String.format("%.3f",Double.parseDouble(deliveryDTO.getDeliveryDistance())) + " Mile");
+                      // multiListBinding.tvTotaldistance.setText(String.format("%.3f",Double.parseDouble(deliveryDTO.getDeliveryDistance())) + " Mile");
+
 
                         multiListBinding.llDistanceValue.setVisibility(View.VISIBLE);
                     }
@@ -597,7 +618,7 @@ public class MultipleAdd extends BaseFragment implements View.OnClickListener, A
                     }
 
                 }
-            });
+            });*/
 
 
         }
@@ -779,6 +800,7 @@ public class MultipleAdd extends BaseFragment implements View.OnClickListener, A
                                                 multiListBinding.etPickupDate.setText(deliveryDTO.getPickupDate());
                                                 multiListBinding.etPickupTime.setText(deliveryDTO.getDeliveryTime());
                                                 contacts = response.body().getMultipledata().getMultipleDTOArrayList();
+                                                Log.d(TAG, "datam: "+new Gson().toJson(response.body().getMultipledata().getMultipleDTOArrayList()));
                                                 if (deliveryDTO.getDeliveryStatus().equals("1")) {
                                                     multiListBinding.btnRouteing.setVisibility(View.GONE);
                                                     multiListBinding.btnSummit.setVisibility(View.GONE);
@@ -974,7 +996,7 @@ public class MultipleAdd extends BaseFragment implements View.OnClickListener, A
             Log.d("totalPrice ",totalPrice.toLowerCase());
 
              multiListBinding.tvTotalcost.setText(getString(R.string.us_dollar) + " " + String.valueOf(Double.valueOf(totalPrice)));
-
+            multiListBinding.tvTotaldistance.setText(deliveryDTO.getTotal_distance());
 
             if(contacts.size() == 20)
             {
@@ -1324,15 +1346,16 @@ public class MultipleAdd extends BaseFragment implements View.OnClickListener, A
 
             DeliveryMultipleDTO deliveryMultipleDTO =  new DeliveryMultipleDTO();
             deliveryMultipleDTO.setDeliveryDTO(deliveryDTO);
-
-            deliveryMultipleDTO.setMultipleDTOArrayList(db.getAllContacts());
+//            deliveryMultipleDTO.setMultipleDTOArrayList(db.getAllContacts());
+            deliveryMultipleDTO.setMultipleDTOArrayList(contacts);
             System.out.println(new Gson().toJson(deliveryMultipleDTO));
             DeliverySendMultipleDataDTO deliverySendMultipleDataDTO = new DeliverySendMultipleDataDTO();
             deliverySendMultipleDataDTO.setData(APP_TOKEN);
             deliverySendMultipleDataDTO.setDeliveryMultipleDTO(deliveryMultipleDTO);
 
             Log.d("datamulcal",new Gson().toJson(deliverySendMultipleDataDTO));
-
+            System.out.println("newdta"+new Gson().toJson(deliverySendMultipleDataDTO));
+            Log.d(TAG, "callOrderMultipleBookApi: "+new Gson().toJson(deliveryDTO));
             APIInterface apiInterface = APIClient.getClient();
             Call<PricesDTO> call = apiInterface.priceCalculationForMultipleAPI(deliverySendMultipleDataDTO);
             call.enqueue(new Callback<PricesDTO>() {
@@ -1347,10 +1370,16 @@ public class MultipleAdd extends BaseFragment implements View.OnClickListener, A
 
                                 deliveryDTO.setDeliveryCost(String.format("%.2f",Double.parseDouble(response.body().getPricedat().getTotalPrice())));
                                 deliveryDTO.setNo_tax_delivery_cost(response.body().getPricedat().getTotal());
+                                deliveryDTO.setTotal_distance(response.body().getPricedat().getStop_location_final());
+                                deliveryDTO.setDeliveryDistance(String.format("%.2f",Double.parseDouble(response.body().getPricedat().getStop_location_final())));
+
+                                Log.d(TAG, "onResponse: "+new Gson().toJson(response.body()));
+
                                 for (int priint =0 ;priint < response.body().getPricedat().getDrop().size();priint ++){
                                     contacts.get(priint).setDeliveryCost(response.body().getPricedat().getDrop().get(priint).getTotalPrice());
                                 }
                                 multiListBinding.tvTotalcost.setText(getString(R.string.us_dollar) + " "+String.format("%.2f",Double.parseDouble(deliveryDTO.getDeliveryCost())));
+                                multiListBinding.tvTotaldistance.setText(String.format("%.3f",Double.parseDouble(deliveryDTO.getTotal_distance()))+ " Mile");
                                 multiListBinding.dropRecycler.setAdapter(multipleDropAdapter);
                                 multipleDropAdapter.notifyDataSetChanged();
 

@@ -22,8 +22,19 @@ public class Pricedat{
   @SerializedName("totalPrice")
   @Expose
   private String totalPrice;
+    @SerializedName("stop_location_final")
+    @Expose
+    private String stop_location_final;
 
-  public void setDrop(ArrayList<DropPrices> drop){
+    public String getStop_location_final() {
+        return stop_location_final;
+    }
+
+    public void setStop_location_final(String stop_location_final) {
+        this.stop_location_final = stop_location_final;
+    }
+
+    public void setDrop(ArrayList<DropPrices> drop){
    this.drop=drop;
   }
 

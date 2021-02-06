@@ -1,19 +1,14 @@
 <component name="libraryTable">
   <library name="Gradle: io.michaelrocks:libphonenumber-android:8.10.7@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b2170305b220250275dbef2ba8599ff1/libphonenumber-android-8.10.7/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b2170305b220250275dbef2ba8599ff1/libphonenumber-android-8.10.7/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b2170305b220250275dbef2ba8599ff1/libphonenumber-android-8.10.7/AndroidManifest.xml" />
       <root url="jar://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/transforms-2/files-2.1/b2170305b220250275dbef2ba8599ff1/libphonenumber-android-8.10.7/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/transforms-2/files-2.1/b2170305b220250275dbef2ba8599ff1/libphonenumber-android-8.10.7/res" />
       <root url="file://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/transforms-2/files-2.1/b2170305b220250275dbef2ba8599ff1/libphonenumber-android-8.10.7/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.michaelrocks/libphonenumber-android/8.10.7/3dc7fd3b170ccd20d4608b64efa77da2ffa040d/libphonenumber-android-8.10.7-javadoc.jar!/" />
       <root url="jar://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/modules-2/files-2.1/io.michaelrocks/libphonenumber-android/8.10.7/3dc7fd3b170ccd20d4608b64efa77da2ffa040d/libphonenumber-android-8.10.7-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.michaelrocks/libphonenumber-android/8.10.7/df8cd97e3d224e332d0b21d04f72720fc7ddfbf8/libphonenumber-android-8.10.7-sources.jar!/" />
       <root url="jar://$PROJECT_DIR$/../TVCAndroidDriverFinal/gradle/gradle-3.3/caches/modules-2/files-2.1/io.michaelrocks/libphonenumber-android/8.10.7/df8cd97e3d224e332d0b21d04f72720fc7ddfbf8/libphonenumber-android-8.10.7-sources.jar!/" />
     </SOURCES>
   </library>

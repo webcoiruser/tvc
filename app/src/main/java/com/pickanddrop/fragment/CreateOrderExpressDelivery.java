@@ -1671,7 +1671,23 @@ public class CreateOrderExpressDelivery extends BaseFragment implements AppConst
                 return false;
             }
 
-        }else if(!deliveryType.equalsIgnoreCase("Miscellaneous") && (Integer.parseInt(NoofPallets) > 26) && productMeasure.equals("Pallet") ){
+        }else if((Integer.parseInt(NoofPallets) > 26) && productMeasure.equals("PalletAndBox") ){
+
+            utilities.dialogOK(context, getString(R.string.validation_title), "Maxmium pallets 26.", getString(R.string.ok), false);
+            createOrderExpressDeliveryBinding.etPalletsCount.requestFocus();
+            return false;
+
+
+        }
+        else if((Integer.parseInt(NoofPallets1) > 26) && productMeasure.equals("PalletAndBox") ){
+
+            utilities.dialogOK(context, getString(R.string.validation_title), "Minimum boxes 24.", getString(R.string.ok), false);
+            createOrderExpressDeliveryBinding.etPalletsCount2.requestFocus();
+            return false;
+
+
+        }
+        else if(!deliveryType.equalsIgnoreCase("Miscellaneous") && (Integer.parseInt(NoofPallets) > 26) && productMeasure.equals("Pallet") ){
 
                         utilities.dialogOK(context, getString(R.string.validation_title), "Maxmium pallets 26.", getString(R.string.ok), false);
                         createOrderExpressDeliveryBinding.etPalletsCount.requestFocus();

@@ -466,6 +466,12 @@ public class DeliveryDTO implements Parcelable{
         @Expose
         private String no_tax_delivery_cost;
 
+
+
+        @SerializedName("total_distance")
+        @Expose
+        private String total_distance;
+
         @SerializedName("weight_unit")
         @Expose
         private String weight_unit;
@@ -765,7 +771,13 @@ public class DeliveryDTO implements Parcelable{
         public void setPickupComapnyName(String pickupComapnyName) {
             this.pickupComapnyName = pickupComapnyName;
         }
+        public String getTotal_distance() {
+            return total_distance;
+        }
 
+        public void setTotal_distance(String total_distance) {
+            this.total_distance = total_distance;
+        }
         public String getNo_tax_delivery_cost() {
             return no_tax_delivery_cost;
         }

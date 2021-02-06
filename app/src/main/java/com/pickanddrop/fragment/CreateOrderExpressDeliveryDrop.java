@@ -2371,10 +2371,10 @@ public class CreateOrderExpressDeliveryDrop extends BaseFragment implements AppC
                         int parcelCount = 0;
 
                         try {
-                            deliveryDTO.setDeliveryDistance(String.format("%.2f", Double.parseDouble(distanceInmiles + "")));
+                           deliveryDTO.setDeliveryDistance(String.format("%.2f", Double.parseDouble(distanceInmiles + "")));
                         } catch (Exception e) {
                             e.printStackTrace();
-                            deliveryDTO.setDeliveryDistance(String.valueOf(distanceInmiles));
+                           deliveryDTO.setDeliveryDistance(String.valueOf(distanceInmiles));
 
                         }
 
@@ -2688,10 +2688,21 @@ public class CreateOrderExpressDeliveryDrop extends BaseFragment implements AppC
 
                 }
 
+                //TextUtils.isEmpty(createOrderExpressDeliveryDropBinding.etPalletsCount.getText().toString().trim()) ? 0 : createOrderExpressDeliveryDropBinding.etPalletsCount.getText().toString().trim());
 
-                int current_item_count = Integer.parseInt(createOrderExpressDeliveryDropBinding.etPalletsCount.getText().toString().trim());
+                int current_item_count = TextUtils.isEmpty(createOrderExpressDeliveryDropBinding.etPalletsCount.getText().toString().trim()) ? 0 : Integer.parseInt(createOrderExpressDeliveryDropBinding.etPalletsCount.getText().toString().trim());
+
 
                 if(current_item_count<=0){
+                    Toast.makeText(context, "Number of "+productMeasure +" can't be zero ", Toast.LENGTH_SHORT).show();
+                    return;
+
+                }
+
+                int current_item_count2 = TextUtils.isEmpty(createOrderExpressDeliveryDropBinding.etPalletsCount2.getText().toString().trim()) ? 0 : Integer.parseInt(createOrderExpressDeliveryDropBinding.etPalletsCount2.getText().toString().trim());
+
+
+                if(current_item_count2<=0){
                     Toast.makeText(context, "Number of "+productMeasure +" can't be zero ", Toast.LENGTH_SHORT).show();
                     return;
 
@@ -3431,10 +3442,21 @@ public class CreateOrderExpressDeliveryDrop extends BaseFragment implements AppC
             createOrderExpressDeliveryDropBinding.spTypeOfBox.requestFocus();
             return false;
         }
-//        else if (productMeasure.equalsIgnoreCase("PalletAndBox")){
-//            utilities.dialogOK(context, getString(R.string.validation_title), "Enter the number of boxes.", getString(R.string.ok), false);
-//            createOrderExpressDeliveryDropBinding.etPalletsCount2.requestFocus();
-//        }
+        else if (  productMeasure.equalsIgnoreCase("PalletAndBox")){
+
+            if ((Integer.parseInt(NoofPallets1)  == 0 || String.valueOf(NoofPallets1)  == "")){
+            utilities.dialogOK(context, getString(R.string.validation_title), "Enter the number of boxes.", getString(R.string.ok), false);
+            createOrderExpressDeliveryDropBinding.etPalletsCount2.requestFocus();
+            return false;
+
+            }else if ((Integer.parseInt(NoofPallets)  == 0 || String.valueOf(NoofPallets)  == "")){
+                utilities.dialogOK(context, getString(R.string.validation_title), "Enter the number of pallets.", getString(R.string.ok), false);
+                createOrderExpressDeliveryDropBinding.etPalletsCount.requestFocus();
+           return false;
+            }
+
+        }
+
         else if (NoofPallets.equals("") && !productMeasure.equalsIgnoreCase("Miscellaneous")) {
 
             if (productMeasure.equals("Pallet")) {
@@ -3451,9 +3473,9 @@ public class CreateOrderExpressDeliveryDrop extends BaseFragment implements AppC
                 return false;
             }
 
-        }else if(!deliveryType.equalsIgnoreCase("Miscellaneous") && (Integer.parseInt(NoofPallets) > 26) && productMeasure.equals("Pallet") ){
+        }else if(!deliveryType.equalsIgnoreCase("Miscellaneous") && (Integer.parseInt(NoofPallets) > 14) && productMeasure.equals("Pallet") ){
 
-            utilities.dialogOK(context, getString(R.string.validation_title), "Maxmium pallets 26.", getString(R.string.ok), false);
+            utilities.dialogOK(context, getString(R.string.validation_title), "Maxmium pallets 14.", getString(R.string.ok), false);
             createOrderExpressDeliveryDropBinding.etPalletsCount.requestFocus();
             return false;
 
@@ -4509,7 +4531,7 @@ public class CreateOrderExpressDeliveryDrop extends BaseFragment implements AppC
                 }
 
                 Double val = Double.parseDouble(strNew);
-                deliveryDTO.setDeliveryDistance(String.valueOf(val));
+               deliveryDTO.setDeliveryDistance(String.valueOf(val));
                 Log.d("newdata",deliveryDTO.getDeliveryDistance());
                 callOrderBookApi();
 

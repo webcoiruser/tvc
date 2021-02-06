@@ -156,10 +156,10 @@ public class PaymentRequest extends AppCompatActivity implements AppConstants , 
     }
 
     private void CountTimer(){
-        countDownTimer = new CountDownTimer(250000, 1000) {
+        countDownTimer = new CountDownTimer(2000, 500) {
 
             public void onTick(long millisUntilFinished) {
-                activityPaymentRequedtBinding.myProgress.setProgress(250-(int) millisUntilFinished/ 1000);
+                activityPaymentRequedtBinding.myProgress.setProgress(500-(int) millisUntilFinished/ 1000);
 
 
             }

@@ -132,9 +132,9 @@ public class MapsActivity extends BaseFragment implements OnMapReadyCallback, Vi
         }
         locationManager=(LocationManager)getActivity(). getSystemService(Context.LOCATION_SERVICE);
 
-        BitmapDrawable bitmapdraw = (BitmapDrawable) getResources().getDrawable(R.drawable.cae_new_icon);
+        BitmapDrawable bitmapdraw = (BitmapDrawable) getResources().getDrawable(R.drawable.new_car_icon);
         Bitmap b = bitmapdraw.getBitmap();
-        car_bitmap = Bitmap.createScaledBitmap(b, 80, 80, false);
+        car_bitmap = Bitmap.createScaledBitmap(b, 120, 120, false);
 
 
     }
@@ -176,7 +176,7 @@ public class MapsActivity extends BaseFragment implements OnMapReadyCallback, Vi
             @Override
             public void run() {
                 //call function
-               Driverlocationfun();
+                Driverlocationfun();
                 ha.postDelayed(this, 3000);
             }
         }, 3000);
@@ -254,7 +254,7 @@ public class MapsActivity extends BaseFragment implements OnMapReadyCallback, Vi
                                                 .title(getString(R.string.pickup_txt)));
 
                                         CameraPosition cameraPosition =
-                                                new CameraPosition.Builder().target(latLngArrayList.get(0)).zoom(14).build();
+                                                new CameraPosition.Builder().target(latLngArrayList.get(0)).zoom(16).build();
                                         mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition),2500,null);
 
                                         mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
@@ -314,7 +314,7 @@ public class MapsActivity extends BaseFragment implements OnMapReadyCallback, Vi
 //                markerPoints.add(pick3);m
 
                     CameraPosition cameraPosition =
-                            new CameraPosition.Builder().target(latLngArrayList.get(0)).zoom(14).build();
+                            new CameraPosition.Builder().target(latLngArrayList.get(0)).zoom(16).build();
                     mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition),2500,null);
 
                     mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
@@ -426,7 +426,7 @@ public class MapsActivity extends BaseFragment implements OnMapReadyCallback, Vi
         Map<String, String> map = new HashMap<>();
         System.out.println("orderidssssmulitiple------>"+oderidss);
         map.put("order_id", oderidss);
-       // map.put("driver_id",Driveridd);
+        // map.put("driver_id",Driveridd);
         map.put("code", APP_TOKEN);
 
         APIInterface apiInterface = APIClient.getClient();
@@ -887,7 +887,7 @@ public class MapsActivity extends BaseFragment implements OnMapReadyCallback, Vi
 
                 // Adding all the points in the route to LineOptions
                 lineOptions.addAll(points);
-                lineOptions.width(5);
+                lineOptions.width(20);
                 lineOptions.color(Color.RED);
 
             }

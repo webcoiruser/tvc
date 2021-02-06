@@ -114,7 +114,7 @@ public class Route extends BaseFragment implements AppConstants, View.OnClickLis
 
         if (getArguments() != null && getArguments().containsKey("deliveryDTO")) {
             deliveryDTO = getArguments().getParcelable("deliveryDTO");
-         //   System.out.println(" GSSSOsddfNNNN--->----> " + new Gson().toJson(deliveryDTO));
+            //   System.out.println(" GSSSOsddfNNNN--->----> " + new Gson().toJson(deliveryDTO));
         }
 
         if (getArguments() != null && getArguments().containsKey("trackRoute")) {
@@ -127,7 +127,7 @@ public class Route extends BaseFragment implements AppConstants, View.OnClickLis
 
         BitmapDrawable bitmapdraw = (BitmapDrawable) getResources().getDrawable(R.drawable.new_car_icon);
         Bitmap b = bitmapdraw.getBitmap();
-        car_bitmap = Bitmap.createScaledBitmap(b, 80, 80, false);
+        car_bitmap = Bitmap.createScaledBitmap(b, 120, 120, false);
 
         final Handler ha=new Handler();
         ha.postDelayed(new Runnable() {
@@ -255,14 +255,14 @@ public class Route extends BaseFragment implements AppConstants, View.OnClickLis
 
                                     if (trackRoute.equalsIgnoreCase("trackdriver")) {
 
-                        //       if (deliveryDTO.getDeliveryType()!=null&&deliveryDTO.getDeliveryType().trim().equalsIgnoreCase("MULTIPLE")) {
+                                        //       if (deliveryDTO.getDeliveryType()!=null&&deliveryDTO.getDeliveryType().trim().equalsIgnoreCase("MULTIPLE")) {
 
-                                        destination = new LatLng(Double.parseDouble(deliveryDTO.getPickupLong()), Double.parseDouble(deliveryDTO.getPickupLong()));
+                                        destination = new LatLng(Double.parseDouble(deliveryDTO.getPickupLat()), Double.parseDouble(deliveryDTO.getPickupLong()));
                                         // destination = new LatLng(Double.parseDouble(droplat), Double.parseDouble(droplang));
                                         url = getDirectionsUrl(curentlocation, destination);
 
                                         CameraPosition cameraPosition =
-                                                new CameraPosition.Builder().target(curentlocation).zoom(14).build();
+                                                new CameraPosition.Builder().target(curentlocation).zoom(16).build();
                                         mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition), 2500, null);
 
 
@@ -284,7 +284,7 @@ public class Route extends BaseFragment implements AppConstants, View.OnClickLis
                                         url = getDirectionsUrl(source, destination);
 
                                         CameraPosition cameraPosition =
-                                                new CameraPosition.Builder().target(source).zoom(14).build();
+                                                new CameraPosition.Builder().target(source).zoom(16).build();
                                         mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition),2500,null);
 
                                         mMap.addMarker(new MarkerOptions()
@@ -353,8 +353,8 @@ public class Route extends BaseFragment implements AppConstants, View.OnClickLis
     private void driverLocationget() {
         Map<String, String> map = new HashMap<>();
         System.out.println("orderidsssssingle------>"+oderidss);
-       // map.put("driver_id",deliveryDTO.getDriverId());
-       map.put("order_id", oderidss);
+        // map.put("driver_id",deliveryDTO.getDriverId());
+        map.put("order_id", oderidss);
         map.put("code", APP_TOKEN);
 
         APIInterface apiInterface = APIClient.getClient();
@@ -469,13 +469,13 @@ public class Route extends BaseFragment implements AppConstants, View.OnClickLis
 
                 float rot = t * bearing + (1 - t) * st;
 
-               float aa = 0.0f;
+                float aa = 0.0f;
                 Log.d("rotateMarker %s", "aa  $aa");
                 //aa = if (-rot > 180) rot / 2 else rot;
                 if(-rot>180) {
                     aa = rot / 2;
                 } else {
-                   aa = rot;
+                    aa = rot;
                 }
                 Log.d("rotateMarker %s", "aa  $aa");
 
@@ -729,7 +729,7 @@ public class Route extends BaseFragment implements AppConstants, View.OnClickLis
 
                 // Adding all the points in the route to LineOptions
                 lineOptions.addAll(points);
-                lineOptions.width(10);
+                lineOptions.width(20);
                 lineOptions.color(Color.RED);
 
             }

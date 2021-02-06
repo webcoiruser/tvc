@@ -127,11 +127,12 @@ public class DeliveryCheckoutExpressDelivery extends BaseFragment implements App
             try {
                 if(deliveryType.equalsIgnoreCase("multiple")){
                     deliveryBookExpressDeliveryBinding.etPrice.setText(getString(R.string.us_dollar) + " " + String.format("%.2f", Double.parseDouble(deliveryDTO.getDeliveryCost())));
+                    deliveryBookExpressDeliveryBinding.etDistance.setText(String.format("%.3f",Double.parseDouble(deliveryDTO.getTotal_distance()))+ " Mile");
 
                 }else {
 
                     deliveryBookExpressDeliveryBinding.etPrice.setText(getString(R.string.us_dollar) + " " + String.format("%.2f", Double.parseDouble(deliveryDTO.getDeliveryCost())));
-
+                    deliveryBookExpressDeliveryBinding.etDistance.setText(String.format("%.3f",Double.parseDouble(deliveryDTO.getTotal_distance()))+ " Mile");
                 }
                 System.out.println("deliverycost" + deliveryDTO.getDeliveryCost());
             } catch (Exception e) {
@@ -216,6 +217,7 @@ public class DeliveryCheckoutExpressDelivery extends BaseFragment implements App
 //        deliveryBookExpressDeliveryBinding.etPrice.setText(getString(R.string.us_dollar)+" 20");
             try {
                 deliveryBookExpressDeliveryBinding.etPrice.setText(getString(R.string.us_dollar) + " " + String.format("%.2f", Double.parseDouble(deliveryDTO.getDeliveryCost())));
+                deliveryBookExpressDeliveryBinding.etDistance.setText(String.format("%.3f",Double.parseDouble(deliveryDTO.getTotal_distance()))+ " Mile");
                 System.out.println("deliverycost" + deliveryDTO.getDeliveryCost());
             } catch (Exception e) {
                 e.printStackTrace();
@@ -496,15 +498,17 @@ public class DeliveryCheckoutExpressDelivery extends BaseFragment implements App
             map.put("parcel_weight", deliveryDTO.getProductWeight());
             map.put("delivery_type", deliveryDTO.getDeliveryType());
             map.put("no_tax_delivery_cost", deliveryDTO.getNo_tax_delivery_cost());
-            map.put("delivery_distance", deliveryDTO.getDeliveryDistance());
+            map.put("delivery_distance", "12333");
             map.put("pickup_building_type",deliveryDTO.getPickupBuildingType());
             map.put("drop_building_type",deliveryDTO.getDropBuildingType());
             map.put("drop_elevator",deliveryDTO.getDropElevator());
             map.put("type_of_truck",deliveryDTO.getType_of_truck());
             try {
                 map.put("delivery_cost",String.format("%.2f", Double.parseDouble(deliveryDTO.getDeliveryCost())) );
+                //map.put("delivery_distance",String.format("%.2f", Double.parseDouble(deliveryDTO.getTotal_distance())) );
               } catch (Exception e) {
                 map.put("delivery_cost", deliveryDTO.getDeliveryCost());
+                //map.put("delivery_distance",String.format("%.2f", Double.parseDouble(deliveryDTO.getTotal_distance())) );
                 e.printStackTrace();
             }
             map.put("vehicle_type", deliveryDTO.getVehicleType());
@@ -593,6 +597,9 @@ public class DeliveryCheckoutExpressDelivery extends BaseFragment implements App
             DeliveryMultipleDTO deliveryMultipleDTO =  new DeliveryMultipleDTO();
             //deliveryDTO.setDeliveryCost(String.format("%.2f", Double.parseDouble(MultipleAdd.totalPrice)));
             deliveryDTO.setDriverDeliveryCost(deliveryBookExpressDeliveryBinding.etPrice.getText().toString().trim());
+          //  deliveryDTO.setDriverDeliveryCost(deliveryBookExpressDeliveryBinding.etDistance.getText().toString().trim());
+            deliveryDTO.setDeliveryDistance(deliveryBookExpressDeliveryBinding.etDistance.getText().toString().trim());
+            Log.e("error","imran"+deliveryBookExpressDeliveryBinding.etDistance.getText().toString().trim());
             deliveryMultipleDTO.setDeliveryDTO(deliveryDTO);
             deliveryMultipleDTO.setMultipleDTOArrayList(db.getAllContacts());
             System.out.println("DDKJHDGKDFHGKDHGKJD"+new Gson().toJson(deliveryMultipleDTO));

@@ -18,7 +18,19 @@ public class PricesDTO{
   @SerializedName("message")
   @Expose
   private String message;
-  public void setResult(String result){
+  @SerializedName("stop_location_final")
+  @Expose
+  private String stop_location_final;
+
+    public String getStop_location_final() {
+        return stop_location_final;
+    }
+
+    public void setStop_location_final(String stop_location_final) {
+        this.stop_location_final = stop_location_final;
+    }
+
+    public void setResult(String result){
    this.result=result;
   }
   public String getResult(){
